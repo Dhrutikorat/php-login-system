@@ -3,3 +3,8 @@
 if(!defined('__CONFIG__')){
     exit('you do not have a config file');
 }
+
+// db connection
+include_once('classess/db.php');
+
+$conn = DB::getConnection();

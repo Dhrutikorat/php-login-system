@@ -1,3 +1,9 @@
-<?php
+<?php 
+    //define constant 
+    define('__CONFIG__',true);
 
-echo "hello";
+    require_once('inc/config.php');
+    include_once('inc/header.php');
+
+    echo $_SESSION['user_id']. 'is your user id';
+?>

@@ -9,6 +9,12 @@ require_once('inc/config.php');
 
 <head>
    <?php include_once('inc/header.php');?>
+   <style>
+       .js-error{
+           padding:2px;
+           margin-bottom: 5px;
+       }
+   </style>
 </head>
 
 <body>

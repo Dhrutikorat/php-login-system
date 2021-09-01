@@ -14,11 +14,9 @@
 
         $email = $_POST['email'];
 
-        $findUser = $conn->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
-        $findUser -> bindParam(':email',$email,PDO::PARAM_STR);
-        $findUser->execute();
+        $findUser = user::find($email);
         
-        if($findUser->rowCount() == 1){
+        if($findUser){
             $return['error'] = 'You already have an account';
         }else{
             $password = password_hash($_POST['password'],PASSWORD_DEFAULT);

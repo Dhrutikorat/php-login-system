@@ -15,14 +15,11 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $findUser = $conn->prepare("SELECT id,password FROM users WHERE email = :email LIMIT 1");
-        $findUser -> bindParam(':email',$email,PDO::PARAM_STR);
-        $findUser->execute();
+        $findUser = user::find($email,true);
         
-        if($findUser->rowCount() == 1){
-            $user = $findUser->fetch(PDO::FETCH_ASSOC);
-            $user_id = (int)$user['id'];
-            $hash = $user['password'];
+        if($findUser){
+            $user_id = (int)$findUser['id'];
+            $hash = $findUser['password'];
 
             if(password_verify($password,$hash)){
                 $return['redirect'] = 'dashboard.php';

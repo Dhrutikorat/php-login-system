@@ -4,7 +4,7 @@
 
     require_once('inc/config.php');
     include_once('inc/header.php');
-    forceDashboard();
+    page::forceDashboard();
 ?>
     <div class="container">
         <div class="row">

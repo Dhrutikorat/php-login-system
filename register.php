@@ -3,19 +3,19 @@
 define('__CONFIG__', true);
 
 require_once('inc/config.php');
-forceDashboard();
+page::forceDashboard();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-   <?php include_once('inc/header.php');?>
-   <style>
-       .js-error{
-           padding:2px;
-           margin-bottom: 5px;
-       }
-   </style>
+    <?php include_once('inc/header.php'); ?>
+    <style>
+        .js-error {
+            padding: 2px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,5 +47,6 @@ forceDashboard();
         </div>
     </div>
 </body>
-<?php include_once('inc/footer.php');?>
+<?php include_once('inc/footer.php'); ?>
+
 </html>

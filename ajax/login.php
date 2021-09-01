@@ -28,7 +28,7 @@
                 $return['error'] = 'Invalid email/Password combination';
             }
         }else{
-            $return['error'] = 'You do not hsve an account.<a href="register.php">Register Now</a>';
+            $return['error'] = 'You do not have an account.<a href="register.php">Register Now</a>';
         }   
 
         echo json_encode($return, JSON_PRETTY_PRINT);exit;

@@ -13,6 +13,7 @@
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
                     <h2 class="text-center m-4">Sign In</h2>
                     <form  id="loginForm" class="js-login">
+                        <div class="js-error"></div>
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input class="form-control" type="email" name='email' placeholder="Email" required='required'/>

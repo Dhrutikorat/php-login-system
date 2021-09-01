@@ -72,7 +72,7 @@ $(document).on("submit", "form.js-register", function (event) {
         if(data.redirect !== undefined){
             window.location = data.redirect;
         }else if(data.error !== undefined){
-            $('.js-error').html(data.error).show();
+            $('.js-error').text(data.error).show();
         }
     })
     .fail(function ajaxFailed(e){

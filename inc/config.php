@@ -11,5 +11,6 @@ if(!isset($_SESSION)){
 
 // db connection
 include_once('classess/db.php');
+include_once('functions.php');
 
 $conn = DB::getConnection();

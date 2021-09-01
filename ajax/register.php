@@ -29,7 +29,7 @@
             $user_id = $conn->lastInsertId();
             $_SESSION['user_id'] = (int) $user_id;
 
-            $return['redirect'] = 'dashboard.php?msg=welcome';
+            $return['redirect'] = 'dashboard.php';
         }   
 
         echo json_encode($return, JSON_PRETTY_PRINT);exit;
